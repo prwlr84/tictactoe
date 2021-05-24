@@ -1,1 +1,89 @@
-// Specific CSS for your home-page
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap');
+
+body, h2 {
+  font-family: 'Prompt', sans-serif;
+}
+
+div.s_form{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form.simple_form{
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.app {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Prompt', sans-serif;
+}
+
+div.game {
+  width: 100%;
+  height: 100%;
+
+  h2{
+    max-width: 60%;
+    margin: 10% auto;
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+  }
+
+  div.area{
+    opacity: 0;
+    width: 40%;
+    height: 40%;
+    margin: auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-shadow: 8px 16px 50px -5px rgba(0,0,0,0.5);
+    box-shadow: 8px 16px 50px -5px rgba(0,0,0,0.5);
+    transition: all 1s ease-in-out;
+  }
+
+  div.area>*{
+    height: 33.3%;
+    width: 33.3%;
+    border: 1px solid red;
+  }
+
+  div.field1{
+    border-left: 0;
+    border-top: 0;
+  }
+  div.field2{
+    border-top: 0;
+  }
+  div.field3{
+    border-top: 0;
+    border-right: 0;
+  }
+  div.field4{
+    border-left: 0;
+  }
+  div.field6{
+    border-right: 0;
+  }
+  div.field7{
+    border-left: 0;
+    border-bottom: 0;
+  }
+  div.field8{
+    border-bottom: 0;
+  }
+  div.field9{
+    border-bottom: 0;
+    border-right:0;
+  }
+}

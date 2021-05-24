@@ -11,7 +11,6 @@ class Main extends Component {
   componentDidMount(){
     setTimeout(()=> {document.querySelector(".area").style.opacity = 1}, 1000);
     const fields = document.querySelectorAll("div.area > div");
-    console.log(this.props);
 
 
     fields.forEach(field =>{
