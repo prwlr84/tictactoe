@@ -7,14 +7,17 @@ import { Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
 import Main from './containers/main.jsx'
+import Game from './containers/game.jsx'
 
 
 const initialState = {
-  curUsr: gon.user
+  curUsr: gon.user,
+  games: gon.games
 }
 
 const reducers = combineReducers({
-  curUsr: (state = null, action) => state
+  curUsr: (state = null, action) => state,
+  games: (state = null, action) => state
 });
 
 const middlewares = applyMiddleware(reduxPromise);
@@ -24,6 +27,7 @@ ReactDOM.render(
     <Router history={createBrowserHistory()}>
       <Switch>
         <Route path="/" exact component={Main} />
+        <Route path="/games/:id" component={Game} />
       </Switch>
     </Router>
   </Provider>,

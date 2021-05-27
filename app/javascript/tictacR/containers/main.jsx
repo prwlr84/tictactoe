@@ -9,30 +9,22 @@ class Main extends Component {
   }
 
   componentDidMount(){
-    setTimeout(()=> {document.querySelector(".area").style.opacity = 1}, 1000);
-    const fields = document.querySelectorAll("div.area > div");
+    function listen(){
+      document.querySelector(".rooms").style.opacity = 1
+      document.querySelectorAll('h1').forEach(h=>{
+        h.addEventListener('click', ()=>{window.location.href = `/games/${h.id}`})
+      })
+    }
+    listen();
 
-
-    fields.forEach(field =>{
-      field.addEventListener("click", () => console.log(field.id))
-    })
   }
 
   render(){
     return(
       <div className="game">
         <h2>Hey {this.props.curUsr}! Let's play some TicTacToe!</h2>
-        <div className="area">
-          <div className="field1" id="1"></div>
-          <div className="field2" id="2"></div>
-          <div className="field3" id="3"></div>
-          <div className="field4" id="4"></div>
-          <div className="field5" id="5"></div>
-          <div className="field6" id="6"></div>
-          <div className="field7" id="7"></div>
-          <div className="field8" id="8"></div>
-          <div className="field9" id="9"></div>
-        </div>
+        <div className="rooms">{this.props.games.map(game => {return <h1 key={game.id} id={game.id}>{game.name}</h1>})}</div>
+        <h2>Choose a room!</h2>
       </div>
     )
   }
@@ -40,7 +32,8 @@ class Main extends Component {
 
 function mapStateToProps(state) {
  return {
- curUsr: state.curUsr
+ curUsr: state.curUsr,
+ games: state.games
  };
 }
 
