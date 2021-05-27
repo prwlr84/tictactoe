@@ -1,8 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap');
 
-body, h2 {
+body, h2, h1 {
   font-family: 'Prompt', sans-serif;
 }
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+
+  &:hover{
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
+}
+
 
 div.s_form{
   width: 80%;
@@ -13,6 +24,23 @@ div.s_form{
 form.simple_form{
   max-width: 60%;
   margin: 0 auto;
+}
+
+h1{
+  font-size: 15vw;
+}
+
+div.rooms{
+  margin: 0 auto;
+  display: flex;
+  justify-content:center;
+
+  &>*{
+    cursor: pointer;
+    &:hover{
+      color: red;
+    }
+  }
 }
 
 .app {
@@ -35,15 +63,15 @@ div.game {
 
   h2{
     max-width: 60%;
-    margin: 10% auto;
+    margin: 5% auto;
     text-align: center;
     font-family: 'Prompt', sans-serif;
   }
 
   div.area{
     opacity: 0;
-    width: 40%;
-    height: 40%;
+    width: 40vh;
+    height: 40vh;
     margin: auto auto;
     display: flex;
     flex-wrap: wrap;
@@ -53,9 +81,9 @@ div.game {
   }
 
   div.area>*{
-    height: 33.3%;
-    width: 33.3%;
-    border: 1px solid red;
+    height: 33.33333333333333333333333333333333333%;
+    width: 33.33333333333333333333333333333333333%;
+    border: 2px solid red;
   }
 
   div.field1{

@@ -1,6 +1,6 @@
 class Move < ApplicationRecord
   belongs_to :game
+  belongs_to :user
 
-  validates :tile, uniqueness: true, presence: true
-  validates :field, uniqueness: true, presence: true
+  validates :move, presence: true, uniqueness: { alert: "to me, it seems to be taken..." }
 end

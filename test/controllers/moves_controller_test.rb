@@ -1,6 +1,6 @@
 require "test_helper"
 
-class MoveControllerTest < ActionDispatch::IntegrationTest
+class MovesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

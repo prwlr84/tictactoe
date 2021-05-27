@@ -13,6 +13,9 @@
   </head>
 
   <body>
+    <% if flash_messages %>
+      <%= react_component 'AlertCont', messages: flash_messages %>
+    <% end %>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
 
